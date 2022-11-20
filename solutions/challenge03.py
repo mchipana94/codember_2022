@@ -1,6 +1,4 @@
-import ast
-
-input_file = './colors.txt'
+from utils import get_data, evaluate
 
 class Zebra:
     def __init__(self, color1=None, color2=None):
@@ -12,9 +10,7 @@ class Zebra:
         self.add(color2)
     
     def add(self, color):
-        if color is None:
-            return None
-        if self.is_finished:
+        if self.is_finished or color is None:
             return None
         if self.size == 0:
             self.colors[0] = color
@@ -49,7 +45,7 @@ class Zebra:
     def __ge__(self, other):
         return self.size >= other.size
 
-def eval_serie(color_array):
+def get_big_zebra(color_array):
     zebras = [Zebra()]
     for color in color_array:
         zebra = zebras[-1]
@@ -65,24 +61,31 @@ def eval_serie(color_array):
     return zebra_max.size, zebra_max.get_last()
 
 def test():
-    examples = [
-        (['red', 'blue', 'red', 'blue', 'green'],(4, 'blue')),
-        (['green', 'red', 'blue', 'gray'],(2, 'gray')),
-        (['blue', 'blue', 'blue', 'blue'],(1, 'blue')),
-        (['red', 'green', 'red', 'green', 'red', 'green'],(6, 'green')),
-        (['red', 'red', 'blue', 'red', 'red', 'red', 'green'],(3, 'red')),
-        (['green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'red', 'gray', 'blue'],(6, 'red'))
+    input = [
+        ['red', 'blue', 'red', 'blue', 'green'],
+        ['green', 'red', 'blue', 'gray'],
+        ['blue', 'blue', 'blue', 'blue'],
+        ['red', 'green', 'red', 'green', 'red', 'green'],
+        ['red', 'red', 'blue', 'red', 'red', 'red', 'green'],
+        ['green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'green', 'red', 'green', 'red', 'green', 'green', 'red', 'green', 'red', 'green', 'red', 'gray', 'blue']
     ]
 
-    for example,result in examples:
-        output = eval_serie(example)
-        print( 'Passed' if output==result else 'Wrong')
+    output = [
+        (4, 'blue'),
+        (2, 'gray'),
+        (1, 'blue'),
+        (6, 'green'),
+        (3, 'red'),
+        (6, 'red')
+    ]
+
+    evaluate(get_big_zebra, input, output)
 
 def main():
-    archive = open(input_file, 'r')
-    message = archive.read()
-    archive.close()
-    lista = ast.literal_eval(message.replace('\n', ''))
-    print('Result: ',eval_serie(lista))
+    input_file = './colors.txt'
+    data = get_data(input_file, parse=True)
+
+    print('Result: ',get_big_zebra(data))
     
-main()
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,4 @@
-input_file = './encrypted.txt'
+from utils import get_data, evaluate
 
 def decode_word(word):
     output = ''
@@ -28,11 +28,18 @@ def encode_mesage(message):
             output += str(ord(character))
     return output
 
+def test():
+    input = ["109105100117", "9911110010110998101114", "9911110010110998101114 109105100117", "11210897121 116101116114105115"]
+    output = ["midu", "codember", "codember midu", "play tetris"]
+
+    evaluate(decode_message, input, output)
+    
 def main():
-    archive = open(input_file, 'r')
-    message = archive.read()
-    archive.close()
+    input_file = './encrypted.txt'
+    message = get_data(input_file)
+
     print('Encoded Message: ',message)
     print('Decoded Message: ',decode_message(message))
 
-main()
+if __name__ == "__main__":
+    main()

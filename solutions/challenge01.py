@@ -1,4 +1,4 @@
-input_file = './users.txt'
+from utils import get_data
 
 class User():
     def __init__(self, usr=None, eme=None, psw=None, age=None, loc=None, fll=None, **kwargs):
@@ -29,28 +29,26 @@ def text2obj(user_text):
         arguments[pair[0]] = pair[1]
     return User(**arguments)
 
-def read_user(filename):
-    archive = open(filename,'r')
-    user_lines = archive.read().split('\n\n') # split data for every user
-    archive.close()
-
+def get_valid_users(text):
     valid_users = list()
     invalid_users = list()
 
-    for user_line in user_lines:
+    for user_line in text.split('\n\n') :
         user = text2obj(user_line)
         if user.is_valid:
             valid_users.append(user)
         else:
             invalid_users.append(user)
 
-    print('Total Valid Users: ', len(valid_users))
-    print('Last Valid User:')
-    print(valid_users[-1])
-
-    print('Total Invalid Users: ', len(invalid_users))
-    print('Last Invalid User:')
-    print(invalid_users[-1])
+    return valid_users
     
+def main():
+    input_file = './users.txt'
+    text = get_data(input_file)
 
-read_user(input_file)
+    valid_users =get_valid_users(text)
+    print('Total Valid Users: ', len(valid_users))
+    print('Last Valid User:', valid_users[-1])
+
+if __name__ == "__main__":
+    main()
