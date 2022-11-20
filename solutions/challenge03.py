@@ -82,7 +82,7 @@ def test():
     evaluate(get_big_zebra, input, output)
 
 def main():
-    input_file = './colors.txt'
+    input_file = './files/colors.txt'
     data = get_data(input_file, parse=True)
 
     print('Result: ',get_big_zebra(data))

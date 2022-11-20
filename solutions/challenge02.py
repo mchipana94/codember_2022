@@ -35,7 +35,7 @@ def test():
     evaluate(decode_message, input, output)
     
 def main():
-    input_file = './encrypted.txt'
+    input_file = './files/encrypted.txt'
     message = get_data(input_file)
 
     print('Encoded Message: ',message)

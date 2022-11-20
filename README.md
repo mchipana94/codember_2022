@@ -4,7 +4,7 @@
 
 ## IMPLEMENTACIÓN
 
-Las soluciones han sido desarrollada en `Python 3.7`
+Las soluciones han sido desarrollada en `Python 3.7`.
 
 ## INDICE
 - Retos

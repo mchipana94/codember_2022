@@ -43,7 +43,7 @@ def get_valid_users(text):
     return valid_users
     
 def main():
-    input_file = './users.txt'
+    input_file = './files/users.txt'
     text = get_data(input_file)
 
     valid_users =get_valid_users(text)
