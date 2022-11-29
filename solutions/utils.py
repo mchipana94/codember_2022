@@ -1,7 +1,7 @@
 import ast
 
 def get_data(filename, parse=False):
-    archive = open(filename, 'r')
+    archive = open(filename, 'r', encoding='utf8')
     data = archive.read()
     archive.close()
     if parse:
