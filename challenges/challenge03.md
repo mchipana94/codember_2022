@@ -1,6 +1,6 @@
 # Reto 3: La zebra de colores
 
-# Problema
+## Problema
 
 TMChein ya se está preparando para las fiestas y quiere empezar a decorar la casa con las luces de navidad.
 
@@ -25,7 +25,7 @@ Ahora que ya sabes esto, [colors.txt](/files/colors.txt)
 Recuerda que una zebra de colores es cuando dos colores se alternan una y otra vez. Si se repite un color en la posición siguiente o es un tercer color, entonces se deja de contar.\
 Lo que queremos calcular es la tira de colores más larga en forma de zebra y el último color de esa tira de colores.
 
-# Cómo enviar la solución
+## Cómo enviar la solución
 
 Usa el comando "submit" para enviar tu solución. Por ejemplo:
 
