@@ -11,7 +11,9 @@ Las soluciones han sido desarrollada en `Python 3.7`.
     - [Reto 1](/challenges/challenge01.md)
     - [Reto 2](/challenges/challenge02.md)
     - [Reto 3](/challenges/challenge03.md)
+    - [Reto 4](/challenges/challenge04.md)
 - Soluciones
     - [Solución 1](/solutions/challenge01.py)
     - [Solución 2](/solutions/challenge02.py)
     - [Solución 3](/solutions/challenge03.py)
+    - [Solución 4](/solutions/challenge04.py)
