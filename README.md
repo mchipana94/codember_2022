@@ -1,21 +1,23 @@
 # CODEMBER 2022
+[Español](README_SPANISH.md)
 
-[Codember](https://codember.dev/) es un juego y reto de programación que se realiza en el mes de noviembre para la comunidad de [midudev](https://github.com/midudev).
+[Codember](https://codember.dev/)  is a game and programming challenge that that takes place in the month of November for the dev community by [midudev](https://github.com/midudev).
 
-## IMPLEMENTACIÓN
+## IMPLEMENTATION
 
-Las soluciones han sido desarrollada en `Python 3.7`.
+The solutions have been developed in `Python 3.7`.
 
-## INDICE
-- Retos
-    - [Reto 1](/challenges/challenge01.md)
-    - [Reto 2](/challenges/challenge02.md)
-    - [Reto 3](/challenges/challenge03.md)
-    - [Reto 4](/challenges/challenge04.md)
-    - [Reto 5](/challenges/challenge05.md)
-- Soluciones
-    - [Solución 1](/solutions/challenge01.py)
-    - [Solución 2](/solutions/challenge02.py)
-    - [Solución 3](/solutions/challenge03.py)
-    - [Solución 4](/solutions/challenge04.py)
-    - [Solución 5](/solutions/challenge05.py)
+## CONTENT
+
+- Challenges
+    - [Challenge 1](/challenges/en/challenge01.md)
+    - [Challenge 2](/challenges/en/challenge02.md)
+    - [Challenge 3](/challenges/en/challenge03.md)
+    - [Challenge 4](/challenges/en/challenge04.md)
+    - [Challenge 5](/challenges/en/challenge05.md)
+- Solutions
+    - [Solution 1](/solutions/challenge01.py)
+    - [Solution 2](/solutions/challenge02.py)
+    - [Solution 3](/solutions/challenge03.py)
+    - [Solution 4](/solutions/challenge04.py)
+    - [Solution 5](/solutions/challenge05.py)

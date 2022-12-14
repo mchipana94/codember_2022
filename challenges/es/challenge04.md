@@ -1,4 +1,4 @@
-# Challenge 4: Encuentra la contraseña de tu amigo
+# Reto 4: Encuentra la contraseña de tu amigo
 
 ## Problema
 
